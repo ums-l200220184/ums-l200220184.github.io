@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS IPSD</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        /* Main content styling */
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .cards {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #007aff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.2s ease;
+        }
+
+        /* Hover effects */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card a:hover {
+            color: #0051a1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Website Informatika</h1>
+    </header>
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h3>Tugas Sebelum UTS</h3>
+                <a target="_blank" href="#">Lihat Tugas</a>
+            </div>
+            <div class="card">
+                <h3>Tugas Sebelum UAS</h3>
+                <a target="_blank" href="https://ums-l200220184.github.io/laporan.html">Lihat Tugas</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Menambahkan interaktivitas pada link
+        document.querySelectorAll('.card a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Mencegah aksi default jika link belum ada href yang valid
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    alert("Link belum tersedia.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

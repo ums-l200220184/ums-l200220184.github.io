@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Tugas Sebelum UAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        li:hover {
+            transform: scale(1.05);
+            background-color: #f1f1f1;
+        }
+        strong {
+            color: #333;
+        }
+        .visualization {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function toggleClusterDetails(clusterId) {
+            var element = document.getElementById(clusterId);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Laporan Clustering Grup WhatsApp</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Kata Teratas dalam Cluster</h2>
+            <p>Data telah berhasil diproses dan dilakukan clustering. Berikut adalah hasil analisis:</p>
+            <ul>
+                <li>
+                    <strong>Kata teratas untuk 3 cluster:</strong>
+                    <button onclick="toggleClusterDetails('cluster3')" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 3px;">Tampilkan</button>
+                    <div id="cluster3" style="display: none; margin-top: 10px;">
+                        <ul>
+                            <li>Cluster 1: ['deleted', 'message', 'aku']</li>
+                            <li>Cluster 2: ['media', 'omitted', '𝗼𝗳']</li>
+                            <li>Cluster 3: ['sukoharjo', 'nih', 'bagian']</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <strong>Kata teratas untuk 4 cluster:</strong>
+                    <button onclick="toggleClusterDetails('cluster4')" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 3px;">Tampilkan</button>
+                    <div id="cluster4" style="display: none; margin-top: 10px;">
+                        <ul>
+                            <li>Cluster 1: ['deleted', 'message', 'aku']</li>
+                            <li>Cluster 2: ['media', 'omitted', '𝗼𝗳']</li>
+                            <li>Cluster 3: ['sukoharjo', 'nih', 'bagian']</li>
+                            <li>Cluster 4: ['tiang', 'kulo', 'mas']</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <strong>Kata teratas untuk 5 cluster:</strong>
+                    <button onclick="toggleClusterDetails('cluster5')" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 3px;">Tampilkan</button>
+                    <div id="cluster5" style="display: none; margin-top: 10px;">
+                        <ul>
+                            <li>Cluster 1: ['deleted', 'message', 'aku']</li>
+                            <li>Cluster 2: ['media', 'omitted', '𝗼𝗳']</li>
+                            <li>Cluster 3: ['sukoharjo', 'nih', 'bagian']</li>
+                            <li>Cluster 4: ['tiang', 'kulo', 'mas']</li>
+                            <li>Cluster 5: ['pabelan', 'online', 'warta']</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="visualization">
+            <h2>Visualisasi</h2>
+            <p>Silakan lihat grafik clustering pada hasil output visualisasi di bawah ini.</p>
+            <p><em>Catatan: Grafik clustering dapat ditambahkan melalui file eksternal atau hasil interaktif lainnya.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Laporan Clustering Grup WhatsApp. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
